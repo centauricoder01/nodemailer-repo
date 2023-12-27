@@ -31,8 +31,8 @@ app.post("/mail", (req, res) => {
 
   let mailOptions = {
     from: fromemail,
-    // to: "cityeduguide@gmail.com",
-    to: "rajendrapateljobs@gmail.com",
+    to: "cityeduguide@gmail.com",
+    // to: "rajendrapateljobs@gmail.com",
     // to: "narendraplanedu@gmail.com",
     subject: "RV college of engineering",
     html: `<table width='60%' style='border:1px solid black;'>
