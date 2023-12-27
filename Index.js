@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 // MAIL PART
 
 app.post("/mail", (req, res) => {
-  const { name, email, phone, location, course, college } = req.body;
+  const { name, email, phone, location, course } = req.body;
 
   let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -32,8 +32,8 @@ app.post("/mail", (req, res) => {
   let mailOptions = {
     from: fromemail,
     // to: "cityeduguide@gmail.com",
-    // to: "rajendrapateljobs@gmail.com",
-    to: "narendraplanedu@gmail.com",
+    to: "rajendrapateljobs@gmail.com",
+    // to: "narendraplanedu@gmail.com",
     subject: "RV college of engineering",
     html: `<table width='60%' style='border:1px solid black;'>
                   <th style='background-color:#0051A4;color:#FFFFFF;text-align: center;'>Description</th>
@@ -63,11 +63,6 @@ app.post("/mail", (req, res) => {
                     <td width='65%'>Course</td>
                     <td>${course}</td> 
                   </tr>
-
-                  <tr style='background-color:#AAD4FF;'>
-                    <td width='65%'>College</td>
-                    <td>${college}</td> 
-                  </tr>   
                   </table>`,
   };
 
